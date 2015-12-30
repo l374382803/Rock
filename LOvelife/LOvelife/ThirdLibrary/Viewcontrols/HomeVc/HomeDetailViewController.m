@@ -34,9 +34,9 @@
 - (void)setNav
 {
     self.titleLable.text = @"详情";
-    [self.leftbutton setImage:[UIImage imageNamed:@"iconfont-back"] forState:UIControlStateNormal];
+    [self.leftbutton setImage:[UIImage imageNamed:@"iconfont-back.png"] forState:UIControlStateNormal];
     [self setLeftbuttonClick:@selector(leftButtonClick)];
-    [self.rightbutton setImage:[UIImage imageNamed:@"iconfont-back"] forState:UIControlStateNormal];
+    [self.rightbutton setImage:[UIImage imageNamed:@"iconfont-back.png"] forState:UIControlStateNormal];
     [self setRightbuttonClick:@selector(rightButtonclick)];
 }
 - (void)leftButtonClick

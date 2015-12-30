@@ -51,10 +51,12 @@
 }
 - (void)getData
 {
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     //手动设置数据格式
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",nil];
     [manager GET:[NSString stringWithFormat:ARTICALURL,page] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+       // NSLog(@"------%@",responseObject);
         NSArray *arr = responseObject[@"data"];
         for (NSDictionary *dic in arr) {
             ReadModel *read = [[ReadModel alloc]init];

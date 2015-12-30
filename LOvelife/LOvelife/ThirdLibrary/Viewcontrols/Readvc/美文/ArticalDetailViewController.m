@@ -32,14 +32,16 @@
     [self.view addSubview:_webview];
     //webview与javascript的交互
 }
+//设置导航栏
 - (void)setNav
 {
     self.titleLable.text = @"详情";
-    [self.leftbutton setImage:[UIImage imageNamed:@"iconfont-fenxiang"] forState:UIControlStateNormal];
-    [self.rightbutton setImage:[UIImage imageNamed:@"iconfont-fenxiang"] forState:UIControlStateNormal];
+    [self.leftbutton setImage:[UIImage imageNamed:@"iconfont-fenxiang.png"] forState:UIControlStateNormal];
+    [self.rightbutton setImage:[UIImage imageNamed:@"iconfont-fenxiang.png"] forState:UIControlStateNormal];
     [self setLeftbuttonClick:@selector(leftbuttonclick)];
     [self setRightbuttonClick:@selector(rightbuttonclick)];
 }
+//导航栏按钮点击事件
 - (void)leftbuttonclick
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
@@ -47,7 +49,7 @@
 - (void)rightbuttonclick
 {
     UIImage *ima = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.readModel.pic]]];
-    [UMSocialSnsService presentSnsIconSheetView:self appKey:APPKEY shareText:[NSString stringWithFormat:ARTICALDETAILURL,self.readModel.dataID] shareImage:ima shareToSnsNames:@[UMShareToQQ,UMShareToQzone,UMShareToSina,UMShareToWechatSession] delegate:nil];
+    [UMSocialSnsService presentSnsIconSheetView:self appKey:APPKEY shareText:[NSString stringWithFormat:ARTICALDETAILURL,self.readModel.dataID] shareImage:ima shareToSnsNames:@[UMShareToQQ,UMShareToQzone,UMShareToSina,UMShareToWechatSession,UMShareToRenren] delegate:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -93,8 +93,8 @@
 - (void)settingNav
 {
     self.titleLable.text = @"爱生活";
-    [self.leftbutton setImage:[UIImage imageNamed:@"iconfont-back"] forState:UIControlStateNormal];
-    [self.rightbutton setImage:[UIImage imageNamed:@"iconfont-back"] forState:UIControlStateNormal];
+    [self.leftbutton setImage:[UIImage imageNamed:@"iconfont-back.png"] forState:UIControlStateNormal];
+    [self.rightbutton setImage:[UIImage imageNamed:@"iconfont-back.png"] forState:UIControlStateNormal];
     //设置响应事件
     [self setLeftbuttonClick:@selector(leftbuttonclick)];
     [self setRightbuttonClick:@selector(rightbuttonclick)];
@@ -145,7 +145,7 @@
     [manager GET:[NSString stringWithFormat:HOMEURL,page] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         for (NSDictionary *dic in responseObject[@"data"][@"topic"]) {
-            NSLog(@"%@",dic);
+           // NSLog(@"%@",dic);
             HomeModel *homemodel = [[HomeModel alloc]init];
             [homemodel setValuesForKeysWithDictionary:dic];
             [dataArray addObject:homemodel];
