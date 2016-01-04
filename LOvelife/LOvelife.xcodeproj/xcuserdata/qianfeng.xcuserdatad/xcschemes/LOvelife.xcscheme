@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC3F5BE31C321BB70081CA5F"
-               BuildableName = "LOvelife.app"
-               BlueprintName = "LOvelife"
-               ReferencedContainer = "container:LOvelife.xcodeproj">
+               BlueprintIdentifier = "DD265D831C3219C400102DAD"
+               BuildableName = "LoveLife.app"
+               BlueprintName = "LoveLife"
+               ReferencedContainer = "container:LoveLife.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,34 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DD265D9F1C3219C400102DAD"
+               BuildableName = "LoveLifeTests.xctest"
+               BlueprintName = "LoveLifeTests"
+               ReferencedContainer = "container:LoveLife.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DD265DAA1C3219C400102DAD"
+               BuildableName = "LoveLifeUITests.xctest"
+               BlueprintName = "LoveLifeUITests"
+               ReferencedContainer = "container:LoveLife.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BC3F5BE31C321BB70081CA5F"
-            BuildableName = "LOvelife.app"
-            BlueprintName = "LOvelife"
-            ReferencedContainer = "container:LOvelife.xcodeproj">
+            BlueprintIdentifier = "DD265D831C3219C400102DAD"
+            BuildableName = "LoveLife.app"
+            BlueprintName = "LoveLife"
+            ReferencedContainer = "container:LoveLife.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BC3F5BE31C321BB70081CA5F"
-            BuildableName = "LOvelife.app"
-            BlueprintName = "LOvelife"
-            ReferencedContainer = "container:LOvelife.xcodeproj">
+            BlueprintIdentifier = "DD265D831C3219C400102DAD"
+            BuildableName = "LoveLife.app"
+            BlueprintName = "LoveLife"
+            ReferencedContainer = "container:LoveLife.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BC3F5BE31C321BB70081CA5F"
-            BuildableName = "LOvelife.app"
-            BlueprintName = "LOvelife"
-            ReferencedContainer = "container:LOvelife.xcodeproj">
+            BlueprintIdentifier = "DD265D831C3219C400102DAD"
+            BuildableName = "LoveLife.app"
+            BlueprintName = "LoveLife"
+            ReferencedContainer = "container:LoveLife.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

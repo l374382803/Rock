@@ -3,8 +3,8 @@
 \f3\fswiss\fcharset0 ArialMT;}
 {\colortbl;\red255\green255\blue255;\red45\green5\blue21;\red65\green182\blue69;\red34\green0\blue47;
 \red52\green0\blue71;\red52\green52\blue52;\red255\green39\blue18;\red14\green0\blue45;\red198\green124\blue72;
-\red219\green44\blue56;\red110\green5\blue0;\red199\green141\blue0;\red255\green255\blue255;\red14\green14\blue14;
-\red217\green11\blue0;}
+\red219\green44\blue56;\red110\green5\blue0;\red199\green141\blue0;\red14\green14\blue14;\red217\green11\blue0;
+\red120\green109\blue196;\red164\green8\blue0;\red85\green142\blue40;\red0\green90\blue124;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww23520\viewh18680\viewkind0
 \deftab866
 \pard\tx866\pardeftab866\pardirnatural
@@ -81,39 +81,197 @@ View controller-based status bar appearance\'c9\'e8\'d6\'c3\'ce\'aaNO\
 \
 \pard\pardeftab720\sl420
 
-\f3 \cf12 \cb13 \expnd0\expndtw0\kerning0
-\CocoaLigature1 \outl0\strokewidth0 \strokec14 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-\f0 \cf11 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\f3 \cf12 \expnd0\expndtw0\kerning0
+\CocoaLigature1 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+\f0 \cf11 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx866\pardeftab866\pardirnatural
 \cf11 \
 \pard\pardeftab720\sl420
 
-\f3 \cf12 \cb13 \expnd0\expndtw0\kerning0
-\CocoaLigature1 \outl0\strokewidth0 \strokec14 //
-\f1 \'bb\'f1\'c8\'a1\'cf\'b5\'cd\'b3\'b0\'e6\'b1\'be
-\f3 \
+\f3 \cf12 \expnd0\expndtw0\kerning0
+\CocoaLigature1 //
+\f1 \expnd0\expndtw0\kerning0
+\'bb\'f1\'c8\'a1\'cf\'b5\'cd\'b3\'b0\'e6\'b1\'be
+\f3 \expnd0\expndtw0\kerning0
+\
 #define IOS_VERSION 
-\f1 \'a3\'db
-\f3 [UIDevice currentDevice] systemVersion] floatValue]\
+\f1 \expnd0\expndtw0\kerning0
+\'a3\'db
+\f3 \expnd0\expndtw0\kerning0
+[UIDevice currentDevice] systemVersion] floatValue]\
 #define CurrentSystemVersion 
-\f1 \'a3\'db
-\f3 UIDevice currentDevice] systemVersion]\
+\f1 \expnd0\expndtw0\kerning0
+\'a3\'db
+\f3 \expnd0\expndtw0\kerning0
+UIDevice currentDevice] systemVersion]\
 \'a0\
 //
-\f1 \'bb\'f1\'c8\'a1\'b5\'b1\'c7\'b0\'d3\'ef\'d1\'d4
-\f3 \
+\f1 \expnd0\expndtw0\kerning0
+\'bb\'f1\'c8\'a1\'b5\'b1\'c7\'b0\'d3\'ef\'d1\'d4
+\f3 \expnd0\expndtw0\kerning0
+\
 #define CurrentLanguage (
-\f1 \'a3\'db
-\f3 NSLocale preferredLanguages] objectAtIndex:0])
-\fs26 \cf14 \
+\f1 \expnd0\expndtw0\kerning0
+\'a3\'db
+\f3 \expnd0\expndtw0\kerning0
+NSLocale preferredLanguages] objectAtIndex:0])
+\fs26 \cf13 \expnd0\expndtw0\kerning0
+\
 
-\f0\fs36 \cf11 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\f0\fs36 \cf11 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx866\pardeftab866\pardirnatural
 \cf8 6.scrollview
 \f1 \'c9\'cf\'c3\'e6\'b7\'c5
 \f0 viewcontroller
 \f1 \'ca\'b1
 \f0 \
-\cf15 [self addChildViewController:view];\
+\pard\tx866\pardeftab866\pardirnatural
+\cf14 [self addChildViewController:view];\
 \
-7.}
+7.\cf9 #ifndef kSystemVersion\
+#define kSystemVersion [UIDevice systemVersion]\
+#endif\
+\pard\tx866\pardeftab866\pardirnatural
+\cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #ifndef kiOS6Later\
+#define kiOS6Later (kSystemVersion >= \cf15 6\cf9 )\
+#endif\
+\pard\tx866\pardeftab866\pardirnatural
+\cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #ifndef kiOS7Later\
+#define kiOS7Later (kSystemVersion >= \cf15 7\cf9 )\
+#endif\
+\pard\tx866\pardeftab866\pardirnatural
+\cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #ifndef kiOS8Later\
+#define kiOS8Later (kSystemVersion >= \cf15 8\cf9 )\
+#endif\
+\pard\tx866\pardeftab866\pardirnatural
+\cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #ifndef kiOS9Later\
+#define kiOS9Later (kSystemVersion >= \cf15 9\cf9 )\
+#endif\
+\
+\
+8. cell
+\f1 \'bb\'ac\'b6\'af\'ca\'b1\'b5\'c4\'b6\'af\'bb\'ad\'d0\'a7\'b9\'fb
+\f0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf8 - (void)scrollViewDidScroll:(UIScrollView *)scrollView \{\
+    CGFloat viewHeight = scrollView.frame.size.height + scrollView.contentInset.top;\
+    for (HomeTableViewCell *cell in [_tableview visibleCells]) \{\
+        CGFloat y = cell.center.y - scrollView.contentOffset.y;\
+        CGFloat p = y - viewHeight / 2;\
+        CGFloat scale = cos(p / viewHeight * 2) * 0.95;\
+        \
+        if ([[UIDevice currentDevice].systemVersion intValue]>=8) \{\
+            [UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^\{\
+                cell.imageview.transform = CGAffineTransformMakeScale(scale, scale);\
+            \} completion:NULL];\
+        \} else \{\
+            cell.transform = CGAffineTransformMakeScale(scale, scale);\
+        \}\
+    \}\
+\}\
+9.\cf3 //iOS9
+\f1 \'cf\'c2\'b5\'c4\'ca\'d3\'c6\'b5\'b2\'a5\'b7\'c5
+\f0 \cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #import \cf10 <AVKit/AVKit.h>\cf9 \
+#import \cf10 <AVFoundation/AVFoundation.h>\cf9 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf16  //
+\f1 \'b3\'f5\'ca\'bc\'bb\'af\'b2\'a5\'b7\'c5\'c6\'f7
+\f0 \
+    AVPlayerViewController * playerVC = [[AVPlayerViewController alloc]init];\
+    //
+\f1 \'c9\'e8\'d6\'c3\'b2\'a5\'b7\'c5\'d7\'ca\'d4\'b4
+\f0 \
+    AVPlayer * avPlayer = [AVPlayer playerWithURL:[NSURL URLWithString:model.video]];\
+    playerVC.player= avPlayer;\
+    [self presentViewController:playerVC animated:YES completion:nil];\cf1 \
+\cf8 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf17 10.\cf16 //
+\f1 \'b4\'b4\'bd\'a8\'bb\'ee\'b6\'af\'d6\'b8\'ca\'be\'c6\'f7
+\f0 \
+    self.hud = [[MBProgressHUD alloc]initWithView:self.view];\
+    //
+\f1 \'c9\'e8\'d6\'c3\'bc\'d3\'d4\'d8\'ce\'c4\'d7\'d6
+\f0 \
+    self.hud.labelText = @"
+\f1 \'d5\'fd\'d4\'da\'bc\'d3\'d4\'d8
+\f0 ...";\
+    //
+\f1 \'c9\'e8\'d6\'c3\'bc\'d3\'d4\'d8\'ce\'c4\'d7\'d6\'b5\'c4\'b4\'f3\'d0\'a1
+\f0 \
+    self.hud.labelFont = [UIFont systemFontOfSize:14];\
+    //
+\f1 \'c9\'e8\'d6\'c3\'bc\'d3\'d4\'d8\'ce\'c4\'d7\'d6\'b5\'c4\'d1\'d5\'c9\'ab
+\f0 \
+    self.hud.labelColor = [UIColor whiteColor];\
+    //
+\f1 \'c9\'e8\'d6\'c3\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
+\f0 \
+    self.hud.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];\
+    //
+\f1 \'c9\'e8\'d6\'c3\'d6\'d0\'bc\'e4\'d6\'b8\'ca\'be\'c6\'f7\'b5\'c4\'d1\'d5\'c9\'ab
+\f0 \
+    self.hud.activityIndicatorColor = [UIColor whiteColor];\
+    [self.view addSubview:self.hud];\
+\
+//
+\f1 \'c8\'c3\'bb\'ee\'b6\'af\'d6\'b8\'ca\'be\'bf\'aa\'ca\'bc\'b9\'a4\'d7\'f7
+\f0 \
+    [self.hud show:YES];\
+[self.hud hide:YES];\
+\cf17 \
+11.
+\f1 \'b8\'c4\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'c7\'b0
+\f0 3
+\f1 \'b8\'f6\'d7\'d6\'bd\'da\'b5\'c4\'d1\'d5\'c9\'ab
+\f0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf16  NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%ld:%@",index,model.title]];\
+    [str addAttributes:@\{NSForegroundColorAttributeName:[UIColor redColor]\} range:NSMakeRange(0, 3)];\
+\
+_titlelable.attributedText = str;\
+\
+12.\cf1  \cf17 //
+\f1 \'bc\'c6\'cb\'e3\'c4\'da\'c8\'dd\'b5\'c4\'b4\'f3\'d0\'a1
+\f0 \cf16 \
+  \cf18   CGSize contentSize = [model.text boundingRectWithSize:CGSizeMake(SCREEN_W - 20, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@\{NSFontAttributeName:[UIFont systemFontOfSize:14]\} context:nil].size;\
+    _contentLabel.frame = CGRectMake(10, _mainImageView.frame.size.height + _mainImageView.frame.origin.y + 10, SCREEN_W - 20, contentSize.height + 20);\
+    _contentLabel.text = model.text;\
+    \
+    self.cellHeight = CGRectGetMaxY(_contentLabel.frame) + 10;\
+\
+\cf16 \
+13.\
+\cf18 //
+\f1 \'b8\'f8
+\f0 cell
+\f1 \'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'b6\'af\'bb\'ad
+\f0 \
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath\
+\{\
+    //
+\f1 \'c9\'e8\'d6\'c3
+\f0 cell
+\f1 \'b5\'c4\'b6\'af\'bb\'ad\'d0\'a7\'b9\'fb\'ce\'aa
+\f0 3D
+\f1 \'d0\'a7\'b9\'fb
+\f0 \
+    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);\
+    [UIView animateWithDuration:1 animations:^\{\
+        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);\
+    \}];\
+\}\
+\cf16 \
+\
+\
+}

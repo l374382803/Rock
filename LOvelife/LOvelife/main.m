@@ -1,9 +1,9 @@
 //
 //  main.m
-//  LOvelife
+//  LoveLife
 //
-//  Created by qianfeng on 15/12/29.
-//  Copyright © 2015年 Aurora. All rights reserved.
+//  Created by 杨阳 on 15/12/29.
+//  Copyright © 2015年 yangyang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

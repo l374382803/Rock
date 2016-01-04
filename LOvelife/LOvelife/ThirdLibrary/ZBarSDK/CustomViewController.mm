@@ -101,7 +101,8 @@
     
     //假导航
     UIImageView*navImageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 64)];
-    navImageView.image=[UIImage imageNamed:@"qrcode_scan_bar.png"];
+    //navImageView.image=[UIImage imageNamed:@"qrcode_scan_bar.png"];
+    navImageView.backgroundColor = RGB(255, 156, 187, 1);
     navImageView.userInteractionEnabled=YES;
     [self.view addSubview:navImageView];
     UILabel*titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(WIDTH/2-32,20 , 64, 44)];

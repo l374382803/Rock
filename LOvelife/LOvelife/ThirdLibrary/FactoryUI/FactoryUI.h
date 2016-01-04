@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 @interface FactoryUI : NSObject
 
 //工厂，实际是大批量生产零件的地方，如果映射到代码中，其实就是将一类控件的所有属性用一个静态方法做一总结归纳，方便统一修改

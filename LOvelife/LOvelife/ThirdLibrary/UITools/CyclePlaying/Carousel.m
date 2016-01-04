@@ -270,9 +270,8 @@
     {
         return;
     }
-    //创建timer
+    
     self.timer = [NSTimer timerWithTimeInterval:3.0 target:self selector:@selector(roll) userInfo:nil repeats:YES];
-    //timer的释放
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 - (void)stopTimer
