@@ -20,6 +20,8 @@
 //数据源
 @property(nonatomic,strong) NSMutableArray * dataArray;
 @property(nonatomic,strong) MBProgressHUD * hud;
+//MP3
+@property(nonatomic,strong) NSMutableArray *urlArray;
 
 @end
 

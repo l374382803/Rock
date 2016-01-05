@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCF595381C3B50B600950C89 /* 音效.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCF595371C3B50B600950C89 /* 音效.caf */; };
+		BCF595601C3B572F00950C89 /* MusicPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF5955F1C3B572F00950C89 /* MusicPlayViewController.m */; };
 		DD0E72E41C32356A0037A152 /* GuidePageVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0E72E31C32356A0037A152 /* GuidePageVIew.m */; };
 		DD0E72E71C32601B0037A152 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0E72E61C32601B0037A152 /* LeftViewController.m */; };
 		DD0E72EB1C3276D70037A152 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0E72EA1C3276D70037A152 /* HomeModel.m */; };
@@ -266,6 +268,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BCF595371C3B50B600950C89 /* 音效.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "音效.caf"; sourceTree = "<group>"; };
+		BCF5955E1C3B572F00950C89 /* MusicPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayViewController.h; sourceTree = "<group>"; };
+		BCF5955F1C3B572F00950C89 /* MusicPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayViewController.m; sourceTree = "<group>"; };
 		DD0E72E21C32356A0037A152 /* GuidePageVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageVIew.h; sourceTree = "<group>"; };
 		DD0E72E31C32356A0037A152 /* GuidePageVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageVIew.m; sourceTree = "<group>"; };
 		DD0E72E51C32601B0037A152 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -728,6 +733,7 @@
 		DD265D7B1C3219C400102DAD = {
 			isa = PBXGroup;
 			children = (
+				BCF595371C3B50B600950C89 /* 音效.caf */,
 				DD265FDD1C3220E800102DAD /* Frameworks */,
 				DD265D861C3219C400102DAD /* LoveLife */,
 				DD265DA31C3219C400102DAD /* LoveLifeTests */,
@@ -1543,6 +1549,8 @@
 				DD265FF11C32222000102DAD /* MusicViewController.m */,
 				DDAF1CD71C3A513B0023216E /* MusicDetailViewController.h */,
 				DDAF1CD81C3A513B0023216E /* MusicDetailViewController.m */,
+				BCF5955E1C3B572F00950C89 /* MusicPlayViewController.h */,
+				BCF5955F1C3B572F00950C89 /* MusicPlayViewController.m */,
 			);
 			path = MusicVC;
 			sourceTree = "<group>";
@@ -1781,6 +1789,7 @@
 				DD265E1D1C3219DF00102DAD /* iconfont-iconfontshoucang-2.png in Resources */,
 				DD265FB11C3219E700102DAD /* UMSocialSDKResourcesNew.bundle in Resources */,
 				DD265FAC1C3219E700102DAD /* UMShareEditViewController.xib in Resources */,
+				BCF595381C3B50B600950C89 /* 音效.caf in Resources */,
 				DD265E641C3219DF00102DAD /* welcome5.png in Resources */,
 				DD265FA91C3219E700102DAD /* UMSCommentDetailController.xib in Resources */,
 				DD265FC11C3219E700102DAD /* zbar-help.html in Resources */,
@@ -1958,6 +1967,7 @@
 				DD265F731C3219E700102DAD /* UIViewController+MMDrawerController.m in Sources */,
 				DD265F9A1C3219E700102DAD /* UIImage+WebP.m in Sources */,
 				DD265F7C1C3219E700102DAD /* MJRefreshBackFooter.m in Sources */,
+				BCF595601C3B572F00950C89 /* MusicPlayViewController.m in Sources */,
 				DDAF1CDD1C3A55390023216E /* MusicModel.m in Sources */,
 				DD265F6B1C3219E700102DAD /* AFURLConnectionOperation.m in Sources */,
 				DD265F991C3219E700102DAD /* UIImage+MultiFormat.m in Sources */,

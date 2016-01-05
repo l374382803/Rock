@@ -1,0 +1,611 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset0 Menlo-Bold;
+\f3\fswiss\fcharset0 ArialMT;\f4\fswiss\fcharset0 Helvetica;\f5\fnil\fcharset134 STSongti-SC-Regular;
+\f6\fnil\fcharset0 Georgia;\f7\fnil\fcharset0 Verdana;\f8\fnil\fcharset0 Consolas;
+}
+{\colortbl;\red255\green255\blue255;\red45\green5\blue21;\red65\green182\blue69;\red34\green0\blue47;
+\red52\green0\blue71;\red52\green52\blue52;\red255\green39\blue18;\red14\green0\blue45;\red198\green124\blue72;
+\red219\green44\blue56;\red110\green5\blue0;\red199\green141\blue0;\red14\green14\blue14;\red217\green11\blue0;
+\red120\green109\blue196;\red164\green8\blue0;\red85\green142\blue40;\red0\green90\blue124;\red38\green38\blue38;
+\red63\green105\blue30;\red54\green54\blue54;\red19\green0\blue150;\red242\green242\blue242;\red0\green0\blue255;
+\red15\green112\blue1;\red144\green1\blue18;\red155\green44\blue1;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww23520\viewh18680\viewkind0
+\deftab866
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\fs36 \cf2 \CocoaLigature0 1.\cf1  \cf3 //
+\f1 \'d0\'de\'b8\'c4\'b7\'d6\'b8\'ee\'cf\'df
+\f0 \cf1 \
+    \cf3 //
+\f1 \'b7\'bd\'b7\'a8\'d2\'bb
+\f0 \cf1 \
+    \cf3 //_tableview.separatorColor = [UIColor clearColor];\cf1 \
+    \cf3 //
+\f1 \'b7\'bd\'b7\'a8\'b6\'fe
+\f0 \cf1 \
+    \cf3 //_tableview.separatorStyle = UITableViewCellSeparatorStyleNone;\cf1 \
+    \cf3 //
+\f1 \'c8\'a5\'b5\'f4\'b6\'e0\'d3\'e0\'b5\'c4\'cf\'df\'cc\'f5
+\f0 \cf1 \
+    \cf3 //_tableview.tableFooterView = [[UIView alloc]init];\cf1 \
+    \
+    \cf3 //
+\f1 \'bc\'f4\'b6\'cc\'b7\'d6\'b8\'ee\'cf\'df\'b5\'c4\'b3\'a4\'b6\'c8
+\f0 \cf1 \
+    \cf4 _tableview.separatorInset = UIEdgeInsetsMake(0, 20, 0, 20)\cf1 ;\
+\
+
+\f2\b \cf5 2.
+\f0\b0 \cf1 \
+\cf3 //
+\f1 \'a3\'a81\'a3\'a9\'d0\'de\'b8\'c4\'d7\'b4\'cc\'ac\'c0\'b8\'b5\'c4\'d1\'d5\'c9\'ab\
+//\'b5\'da\'d2\'bb\'b2\'bd\
+\cf6 [
+\f0 UIApplication sharedApplication
+\f1 ].
+\f0 statusBarStyle = UIStatusBarStyleLightContent\
+
+\f1 //\'b5\'da\'b6\'fe\'b2\'bd\
+\'b5\'bdinfo.plist\'d6\'d0\'cc\'ed\'bc\'d3\
+View controller-based status bar appearance\'c9\'e8\'d6\'c3\'ce\'aaNO\
+\'a3\'a82\'a3\'a9
+\f0 \cf3 //(1)
+\f1 \'d0\'de\'b8\'c4\'d7\'b4\'cc\'ac\'c0\'b8\'b5\'c4\'d1\'d5\'c9\'ab
+\f0 \cf1 \
+    \cf3 //\cf7 self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+\f1 //\'d6\'bb\'c4\'dc\'b8\'c4\'b1\'e4\'b5\'b1\'c7\'b0\'d2\'b3\'c3\'e6\'b5\'c4\'d7\'b4\'cc\'ac\'c0\'b8\'b5\'c4\'d1\'d5\'c9\'ab\
+
+\f0 \
+
+\f1 \cf6 \
+3.\'d2\'fd\'b5\'bc\'d2\'b3\'b5\'c4\'c5\'d0\'b6\'cf\'cc\'f5\'bc\'fe\
+
+\f0 \
+\cf8 if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"isRun"]boolValue]) \{\
+	[[NSUserDefaults standardUserDefaults]setObject:@NO forKey:@"isRun"];\
+\}\
+\
+\
+4.PCH
+\f1 \'ce\'c4\'bc\'fe
+\f0 \
+
+\f1 \'d4\'daPCH\'d6\'d0\'cc\'ed\'bc\'d3#import\'a1\'b1\'a1\'b1\'ca\'b1\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0 \cf9 #ifdef __OBJC__\
+#import \cf10 "Header.h"\cf9 \
+#endif\
+\
+\pard\tx866\pardeftab866\pardirnatural
+\cf4 5.
+\f1 \cf9 \'d1\'d5\'c9\'ab\'ba\'ea\'b6\'a8\'d2\'e5
+\f0 \
+#define\cf11  UIcolor(r,g,b,a)[UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:a]\
+\
+\pard\pardeftab720\sl420
+
+\f3 \cf12 \expnd0\expndtw0\kerning0
+\CocoaLigature1 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+\f0 \cf11 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf11 \
+\pard\pardeftab720\sl420
+
+\f3 \cf12 \expnd0\expndtw0\kerning0
+\CocoaLigature1 //
+\f1 \expnd0\expndtw0\kerning0
+\'bb\'f1\'c8\'a1\'cf\'b5\'cd\'b3\'b0\'e6\'b1\'be
+\f3 \expnd0\expndtw0\kerning0
+\
+#define IOS_VERSION 
+\f1 \expnd0\expndtw0\kerning0
+\'a3\'db
+\f3 \expnd0\expndtw0\kerning0
+[UIDevice currentDevice] systemVersion] floatValue]\
+#define CurrentSystemVersion 
+\f1 \expnd0\expndtw0\kerning0
+\'a3\'db
+\f3 \expnd0\expndtw0\kerning0
+UIDevice currentDevice] systemVersion]\
+\'a0\
+//
+\f1 \expnd0\expndtw0\kerning0
+\'bb\'f1\'c8\'a1\'b5\'b1\'c7\'b0\'d3\'ef\'d1\'d4
+\f3 \expnd0\expndtw0\kerning0
+\
+#define CurrentLanguage (
+\f1 \expnd0\expndtw0\kerning0
+\'a3\'db
+\f3 \expnd0\expndtw0\kerning0
+NSLocale preferredLanguages] objectAtIndex:0])
+\fs26 \cf13 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs36 \cf11 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf8 6.scrollview
+\f1 \'c9\'cf\'c3\'e6\'b7\'c5
+\f0 viewcontroller
+\f1 \'ca\'b1
+\f0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf14 [self addChildViewController:view];\
+\
+7.\cf9 #ifndef kSystemVersion\
+#define kSystemVersion [UIDevice systemVersion]\
+#endif\
+\pard\tx866\pardeftab866\pardirnatural
+\cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #ifndef kiOS6Later\
+#define kiOS6Later (kSystemVersion >= \cf15 6\cf9 )\
+#endif\
+\pard\tx866\pardeftab866\pardirnatural
+\cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #ifndef kiOS7Later\
+#define kiOS7Later (kSystemVersion >= \cf15 7\cf9 )\
+#endif\
+\pard\tx866\pardeftab866\pardirnatural
+\cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #ifndef kiOS8Later\
+#define kiOS8Later (kSystemVersion >= \cf15 8\cf9 )\
+#endif\
+\pard\tx866\pardeftab866\pardirnatural
+\cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #ifndef kiOS9Later\
+#define kiOS9Later (kSystemVersion >= \cf15 9\cf9 )\
+#endif\
+\
+\
+8. cell
+\f1 \'bb\'ac\'b6\'af\'ca\'b1\'b5\'c4\'b6\'af\'bb\'ad\'d0\'a7\'b9\'fb
+\f0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf8 - (void)scrollViewDidScroll:(UIScrollView *)scrollView \{\
+    CGFloat viewHeight = scrollView.frame.size.height + scrollView.contentInset.top;\
+    for (HomeTableViewCell *cell in [_tableview visibleCells]) \{\
+        CGFloat y = cell.center.y - scrollView.contentOffset.y;\
+        CGFloat p = y - viewHeight / 2;\
+        CGFloat scale = cos(p / viewHeight * 2) * 0.95;\
+        \
+        if ([[UIDevice currentDevice].systemVersion intValue]>=8) \{\
+            [UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^\{\
+                cell.imageview.transform = CGAffineTransformMakeScale(scale, scale);\
+            \} completion:NULL];\
+        \} else \{\
+            cell.transform = CGAffineTransformMakeScale(scale, scale);\
+        \}\
+    \}\
+\}\
+9.\cf3 //iOS9
+\f1 \'cf\'c2\'b5\'c4\'ca\'d3\'c6\'b5\'b2\'a5\'b7\'c5
+\f0 \cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #import \cf10 <AVKit/AVKit.h>\cf9 \
+#import \cf10 <AVFoundation/AVFoundation.h>\cf9 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf16  //
+\f1 \'b3\'f5\'ca\'bc\'bb\'af\'b2\'a5\'b7\'c5\'c6\'f7
+\f0 \
+    AVPlayerViewController * playerVC = [[AVPlayerViewController alloc]init];\
+    //
+\f1 \'c9\'e8\'d6\'c3\'b2\'a5\'b7\'c5\'d7\'ca\'d4\'b4
+\f0 \
+    AVPlayer * avPlayer = [AVPlayer playerWithURL:[NSURL URLWithString:model.video]];\
+    playerVC.player= avPlayer;\
+    [self presentViewController:playerVC animated:YES completion:nil];\cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf8 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf17 10.\cf16 //
+\f1 \'b4\'b4\'bd\'a8\'bb\'ee\'b6\'af\'d6\'b8\'ca\'be\'c6\'f7
+\f0 \
+    self.hud = [[MBProgressHUD alloc]initWithView:self.view];\
+    //
+\f1 \'c9\'e8\'d6\'c3\'bc\'d3\'d4\'d8\'ce\'c4\'d7\'d6
+\f0 \
+    self.hud.labelText = @"
+\f1 \'d5\'fd\'d4\'da\'bc\'d3\'d4\'d8
+\f0 ...";\
+    //
+\f1 \'c9\'e8\'d6\'c3\'bc\'d3\'d4\'d8\'ce\'c4\'d7\'d6\'b5\'c4\'b4\'f3\'d0\'a1
+\f0 \
+    self.hud.labelFont = [UIFont systemFontOfSize:14];\
+    //
+\f1 \'c9\'e8\'d6\'c3\'bc\'d3\'d4\'d8\'ce\'c4\'d7\'d6\'b5\'c4\'d1\'d5\'c9\'ab
+\f0 \
+    self.hud.labelColor = [UIColor whiteColor];\
+    //
+\f1 \'c9\'e8\'d6\'c3\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
+\f0 \
+    self.hud.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];\
+    //
+\f1 \'c9\'e8\'d6\'c3\'d6\'d0\'bc\'e4\'d6\'b8\'ca\'be\'c6\'f7\'b5\'c4\'d1\'d5\'c9\'ab
+\f0 \
+    self.hud.activityIndicatorColor = [UIColor whiteColor];\
+    [self.view addSubview:self.hud];\
+\
+//
+\f1 \'c8\'c3\'bb\'ee\'b6\'af\'d6\'b8\'ca\'be\'bf\'aa\'ca\'bc\'b9\'a4\'d7\'f7
+\f0 \
+    [self.hud show:YES];\
+[self.hud hide:YES];\
+\cf17 \
+11.
+\f1 \'b8\'c4\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'c7\'b0
+\f0 3
+\f1 \'b8\'f6\'d7\'d6\'bd\'da\'b5\'c4\'d1\'d5\'c9\'ab
+\f0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf16  NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%ld:%@",index,model.title]];\
+    [str addAttributes:@\{NSForegroundColorAttributeName:[UIColor redColor]\} range:NSMakeRange(0, 3)];\
+\
+_titlelable.attributedText = str;\
+\
+12.\cf1  \cf17 //
+\f1 \'bc\'c6\'cb\'e3\'c4\'da\'c8\'dd\'b5\'c4\'b4\'f3\'d0\'a1
+\f0 \cf16 \
+  \cf18   CGSize contentSize = [model.text boundingRectWithSize:CGSizeMake(SCREEN_W - 20, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@\{NSFontAttributeName:[UIFont systemFontOfSize:14]\} context:nil].size;\
+    _contentLabel.frame = CGRectMake(10, _mainImageView.frame.size.height + _mainImageView.frame.origin.y + 10, SCREEN_W - 20, contentSize.height + 20);\
+    _contentLabel.text = model.text;\
+    \
+    self.cellHeight = CGRectGetMaxY(_contentLabel.frame) + 10;\
+\
+\cf16 \
+13.\
+\pard\tx866\pardeftab866\pardirnatural
+\cf18 //
+\f1 \'b8\'f8
+\f0 cell
+\f1 \'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'b6\'af\'bb\'ad
+\f0 \
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath\
+\{\
+    //
+\f1 \'c9\'e8\'d6\'c3
+\f0 cell
+\f1 \'b5\'c4\'b6\'af\'bb\'ad\'d0\'a7\'b9\'fb\'ce\'aa
+\f0 3D
+\f1 \'d0\'a7\'b9\'fb
+\f0 \
+    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);\
+    [UIView animateWithDuration:1 animations:^\{\
+        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);\
+    \}];\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f4\fs72 \cf0 \CocoaLigature1      									
+\f1 \'d2\'f4\'c6\'b5
+\f4 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\fs28 \cf19 \expnd0\expndtw0\kerning0
+	
+\fs48 \'d4\'da
+\f6 iOS
+\f5 \'d6\'d0\'d2\'f4\'c6\'b5\'b2\'a5\'b7\'c5\'b4\'d3\'d0\'ce\'ca\'bd\'c9\'cf\'bf\'c9\'d2\'d4\'b7\'d6\'ce\'aa
+\b \cf7 \'d2\'f4\'d0\'a7\'b2\'a5\'b7\'c5
+\b0 \cf19 \'ba\'cd
+\b \cf14 \'d2\'f4\'c0\'d6\'b2\'a5\'b7\'c5
+\b0 \cf19 \'a1\'a3\'c7\'b0\'d5\'df\'d6\'f7\'d2\'aa\'d6\'b8\'b5\'c4\'ca\'c7\'d2\'bb\'d0\'a9\'b6\'cc\'d2\'f4\'c6\'b5\'b2\'a5\'b7\'c5\'a3\'ac\'cd\'a8\'b3\'a3\'d7\'f7\'ce\'aa\'b5\'e3\'d7\'ba\'d2\'f4\'c6\'b5\'a3\'ac\'b6\'d4\'d3\'da\'d5\'e2\'c0\'e0\'d2\'f4\'c6\'b5\'b2\'bb\'d0\'e8\'d2\'aa\'bd\'f8\'d0\'d0\'bd\'f8\'b6\'c8\'a1\'a2\'d1\'ad\'bb\'b7\'b5\'c8\'bf\'d8\'d6\'c6\'a1\'a3\'ba\'f3\'d5\'df\'d6\'b8\'b5\'c4\'ca\'c7\'d2\'bb\'d0\'a9\'bd\'cf\'b3\'a4\'b5\'c4\'d2\'f4\'c6\'b5\'a3\'ac\'cd\'a8\'b3\'a3\'ca\'c7\'d6\'f7\'d2\'f4\'c6\'b5\'a3\'ac\'b6\'d4\'d3\'da\'d5\'e2\'d0\'a9\'d2\'f4\'c6\'b5\'b5\'c4\'b2\'a5\'b7\'c5\'cd\'a8\'b3\'a3\'d0\'e8\'d2\'aa\'bd\'f8\'d0\'d0\'be\'ab\'c8\'b7\'b5\'c4\'bf\'d8\'d6\'c6\'a1\'a3\'d4\'da
+\f6 iOS
+\f5 \'d6\'d0\'b2\'a5\'b7\'c5\'c1\'bd\'c0\'e0\'d2\'f4\'c6\'b5\'b7\'d6\'b1\'f0\'ca\'b9\'d3\'c3
+\f6 \cf14 AudioToolbox.framework
+\f5 \cf19 \'ba\'cd
+\f6 \cf14 AVFoundation.framework
+\f5 \cf19 \'c0\'b4\'cd\'ea\'b3\'c9\'d2\'f4\'d0\'a7\'ba\'cd\'d2\'f4\'c0\'d6\'b2\'a5\'b7\'c5\'a1\'a3
+\fs28 \
+\
+
+\fs72 \'d2\'bb\'a1\'a2\'d2\'f4\'d0\'a7\
+
+\fs28 \
+	
+\f6\fs48 AudioToolbox.framework
+\f5 \'ca\'c7\'d2\'bb\'cc\'d7\'bb\'f9\'d3\'da
+\f6 C
+\f5 \'d3\'ef\'d1\'d4\'b5\'c4\'bf\'f2\'bc\'dc\'a3\'ac\'ca\'b9\'d3\'c3\'cb\'fc\'c0\'b4\'b2\'a5\'b7\'c5\'d2\'f4\'d0\'a7\'c6\'e4\'b1\'be\'d6\'ca\'ca\'c7\'bd\'ab\'b6\'cc\'d2\'f4\'c6\'b5\'d7\'a2\'b2\'e1\'b5\'bd\'cf\'b5\'cd\'b3\'c9\'f9\'d2\'f4\'b7\'fe\'ce\'f1\'a3\'a8
+\f6 System Sound Service
+\f5 \'a3\'a9\'a1\'a3
+\f6 System Sound Service
+\f5 \'ca\'c7\'d2\'bb\'d6\'d6\'bc\'f2\'b5\'a5\'a1\'a2\'b5\'d7\'b2\'e3\'b5\'c4\'c9\'f9\'d2\'f4\'b2\'a5\'b7\'c5\'b7\'fe\'ce\'f1\'a3\'ac\'b5\'ab\'ca\'c7\'cb\'fc\'b1\'be\'c9\'ed\'d2\'b2\'b4\'e6\'d4\'da\'d7\'c5\'d2\'bb\'d0\'a9\'cf\'de\'d6\'c6\'a3\'ba
+\f6 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf19 \kerning1\expnd0\expndtw0 		
+\f5 \expnd0\expndtw0\kerning0
+\'d2\'f4\'c6\'b5\'b2\'a5\'b7\'c5\'ca\'b1\'bc\'e4\'b2\'bb\'c4\'dc\'b3\'ac\'b9\'fd
+\f6 30s\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 		
+\f5 \expnd0\expndtw0\kerning0
+\'ca\'fd\'be\'dd\'b1\'d8\'d0\'eb\'ca\'c7
+\f6 PCM
+\f5 \'bb\'f2\'d5\'df
+\f6 IMA4
+\f5 \'b8\'f1\'ca\'bd
+\f6 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 		
+\f5 \expnd0\expndtw0\kerning0
+\'d2\'f4\'c6\'b5\'ce\'c4\'bc\'fe\'b1\'d8\'d0\'eb\'b4\'f2\'b0\'fc\'b3\'c9
+\f6 .caf
+\f5 \'a1\'a2
+\f6 .aif
+\f5 \'a1\'a2
+\f6 wav
+\f5 \'d6\'d0\'b5\'c4\'d2\'bb\'d6\'d6\'a3\'a8\'d7\'a2\'d2\'e2\'d5\'e2\'ca\'c7\'b9\'d9\'b7\'bd\'ce\'c4\'b5\'b5\'b5\'c4\'cb\'b5\'b7\'a8\'a3\'ac\'ca\'b5\'bc\'ca\'b2\'e2\'ca\'d4\'b7\'a2\'cf\'d6\'d2\'bb\'d0\'a9
+\f6 .mp3
+\f5 \'d2\'b2\'bf\'c9\'d2\'d4\'b2\'a5\'b7\'c5\'a3\'a9
+\f6\fs28 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5 \cf19 \expnd0\expndtw0\kerning0
+\
+\
+
+\fs48 \cf20 \'b2\'a5\'b7\'c5\'d2\'f4\'d0\'a7\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\fs36 \cf9 \kerning1\expnd0\expndtw0 \CocoaLigature0 #import \cf10 <AudioToolbox/AudioToolbox.h>
+\f5\fs28 \cf19 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\fs36 \cf16 \kerning1\expnd0\expndtw0 \CocoaLigature0 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event\
+\{\
+    NSLog(@"
+\f1 \'bf\'aa\'ca\'bc\'d2\'a1\'b6\'af
+\f0 ");\
+    //
+\f1 \'b4\'b4\'bd\'a8\'cf\'b5\'cd\'b3\'c9\'f9\'d2\'f4
+\f0 id\
+    SystemSoundID soundid;\
+    //
+\f1 \'c9\'e8\'d6\'c3\'b6\'cc\'d0\'a7\'d2\'f4\'c6\'b5\'d7\'ca\'d4\'b4
+\f0 \
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef _Nonnull)([NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"
+\f1 \'d2\'f4\'d0\'a7
+\f0 " ofType:@"caf"]]), &soundid);\
+    //
+\f1 \'bf\'aa\'c6\'f4\'d5\'f0\'b6\'af
+\f0 \
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);\
+    //
+\f1 \'b2\'a5\'b7\'c5
+\f0 \
+    AudioServicesPlaySystemSound(soundid);\
+\}\
+\
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event\
+\{\
+    \
+\}\
+- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event\
+\{\
+    \
+\}\
+\pard\pardeftab720\partightenfactor0
+
+\f5\fs28 \cf19 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+
+\fs72 \'b6\'fe\'a1\'a2\'d2\'f4\'c0\'d6
+\fs28 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs72 \cf0 \kerning1\expnd0\expndtw0 	
+\f5\fs48 \cf19 \expnd0\expndtw0\kerning0
+\'c8\'e7\'b9\'fb\'b2\'a5\'b7\'c5\'bd\'cf\'b4\'f3\'b5\'c4\'d2\'f4\'c6\'b5\'bb\'f2\'d5\'df\'d2\'aa\'b6\'d4\'d2\'f4\'c6\'b5\'d3\'d0\'be\'ab\'c8\'b7\'b5\'c4\'bf\'d8\'d6\'c6\'d4\'f2
+\f6 System Sound Service
+\f5 \'bf\'c9\'c4\'dc\'be\'cd\'ba\'dc\'c4\'d1\'c2\'fa\'d7\'e3\'ca\'b5\'bc\'ca\'d0\'e8\'c7\'f3\'c1\'cb\'a3\'ac\'cd\'a8\'b3\'a3\'d5\'e2\'d6\'d6\'c7\'e9\'bf\'f6\'bb\'e1\'d1\'a1\'d4\'f1\'ca\'b9\'d3\'c3
+\f6 AVFoundation.framework
+\f5 \'d6\'d0\'b5\'c4
+\f6 AVAudioPlayer
+\f5 \'c0\'b4\'ca\'b5\'cf\'d6
+\f1 \cf21 \expnd0\expndtw0\kerning0
+\'a3\'ac\'ce\'d2\'c3\'c7\'bf\'c9\'d2\'d4\'b0\'d1
+\f7  AVAudioPlayer 
+\f1 \'bf\'b4\'d7\'f7\'ca\'c7\'d2\'bb\'b8\'f6\'b8\'df\'bc\'b6\'b5\'c4\'b2\'a5\'b7\'c5\'c6\'f7\'a3\'ac\'cb\'fc\'d6\'a7\'b3\'d6\'b9\'e3\'b7\'ba\'b5\'c4\'d2\'f4\'c6\'b5\'b8\'f1\'ca\'bd\'a1\'a3
+\f4\fs36 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f7 \cf21 	
+\fs48 AVAudioPlayer 
+\f1 \'bf\'c9\'d2\'d4\'b2\'a5\'b7\'c5\'c8\'ce\'d2\'e2\'b3\'a4\'b6\'c8\'b5\'c4\'d2\'f4\'c6\'b5\'ce\'c4\'bc\'fe\'a1\'a2\'d6\'a7\'b3\'d6\'d1\'ad\'bb\'b7\'b2\'a5\'b7\'c5\'a1\'a2\'bf\'c9\'d2\'d4\'cd\'ac\'b2\'bd\'b2\'a5\'b7\'c5\'b6\'e0\'b8\'f6\'d2\'f4\'c6\'b5\'ce\'c4\'bc\'fe\'a1\'a2\'bf\'d8\'d6\'c6\'b2\'a5\'b7\'c5\'bd\'f8\'b6\'c8\'d2\'d4\'bc\'b0\'b4\'d3\'d2\'f4\'c6\'b5\'ce\'c4\'bc\'fe\'b5\'c4\'c8\'ce\'d2\'e2\'d2\'bb\'b5\'e3\'bf\'aa\'ca\'bc\'b2\'a5\'b7\'c5\'b5\'c8\'a3\'ac\'b8\'fc\'b8\'df\'bc\'b6\'b5\'c4\'b9\'a6\'c4\'dc\'bf\'c9\'d2\'d4\'b2\'ce\'bf\'bc
+\f7 \'a0{\field{\*\fldinst{HYPERLINK "http://developer.apple.com/iphone/library/documentation/AVFoundation/Reference/AVAudioPlayerClassReference/Reference/Reference.html"}}{\fldrslt \cf22 AVAudioPlayer 
+\f1 \'b5\'c4\'ce\'c4\'b5\'b5
+\f7 \'a0}}
+\f1 \'a1\'a3\'d2\'aa\'ca\'b9\'d3\'c3
+\f7  AVAudioPlayer 
+\f1 \'b5\'c4\'b6\'d4\'cf\'f3\'b2\'a5\'b7\'c5\'ce\'c4\'bc\'fe\'a3\'ac\'c4\'e3\'d6\'bb\'d0\'e8\'ce\'aa\'c6\'e4\'d6\'b8\'b6\'a8\'d2\'bb\'b8\'f6\'d2\'f4\'c6\'b5\'ce\'c4\'bc\'fe\'b2\'a2\'c9\'e8\'b6\'a8\'d2\'bb\'b8\'f6\'ca\'b5\'cf\'d6\'c1\'cb
+\f7 \'a0AVAudioPlayerDelegate 
+\f1 \'d0\'ad\'d2\'e9\'b5\'c4
+\f7 \'a0delegate 
+\f1 \'b6\'d4\'cf\'f3\'a1\'a3
+\f7 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf21 \'d6\'bb\'d2\'aa\'bd\'ab
+\f7  AVAudioPlayer 
+\f1 \'b5\'c4
+\f7  numberOfLoops 
+\f1 \'ca\'f4\'d0\'d4\'c9\'e8\'ce\'aa\'b8\'ba\'ca\'fd\'a3\'ac\'d2\'f4\'c6\'b5\'ce\'c4\'bc\'fe\'be\'cd\'bb\'e1\'d2\'bb\'d6\'b1\'d1\'ad\'bb\'b7\'b2\'a5\'b7\'c5\'d6\'b1\'b5\'bd\'b5\'f7\'d3\'c3
+\f7  stop 
+\f1 \'b7\'bd\'b7\'a8\'a1\'a3
+\f4 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf21 	AVAudioPlayer
+\f1 \'c0\'e0\'b7\'e2\'d7\'b0\'c1\'cb\'b2\'a5\'b7\'c5\'b5\'a5\'b8\'f6\'c9\'f9\'d2\'f4\'b5\'c4\'c4\'dc\'c1\'a6\'a1\'a3\'b2\'a5\'b7\'c5\'c6\'f7\'bf\'c9\'d2\'d4\'d3\'c3
+\f0 NSURL
+\f1 \'bb\'f2\'d5\'df
+\f0 NSData
+\f1 \'c0\'b4\'b3\'f5\'ca\'bc\'bb\'af\'a3\'ac\cf14 \'d2\'aa\'d7\'a2\'d2\'e2\'b5\'c4\'ca\'c7
+\f0 NSURL
+\f1 \'b2\'bb\'bf\'c9\'d2\'d4\'ca\'c7\'cd\'f8\'c2\'e7
+\f0 url
+\f1 \'b6\'f8\'b1\'d8\'d0\'eb\'ca\'c7\'b1\'be\'b5\'d8\'ce\'c4\'bc\'fe
+\f0 url
+\f1 \'a3\'ac\'d2\'f2\'ce\'aa
+\f0 AVAudioPlayer
+\f1 \'b2\'bb\'be\'df\'b1\'b8\'b2\'a5\'b7\'c5\'cd\'f8\'c2\'e7\'d2\'f4\'c6\'b5\'b5\'c4\'c4\'dc\'c1\'a6\'a1\'a3\cf21 \'d2\'bb\'b8\'f6
+\f0 AVAudioPlayer
+\f1 \'d6\'bb\'c4\'dc\'b2\'a5\'b7\'c5\'d2\'bb\'b8\'f6\'d2\'f4\'c6\'b5\'a3\'ac\'c8\'e7\'b9\'fb\'c4\'e3\'cf\'eb\'bb\'ec\'d2\'f4\'c4\'e3\'bf\'c9\'d2\'d4\'b4\'b4\'bd\'a8\'b6\'e0\'b8\'f6
+\f0 AVAudioPlayer
+\f1 \'ca\'b5\'c0\'fd\'a3\'ac\'c3\'bf\'b8\'f6\'cf\'e0\'b5\'b1\'d3\'da\'bb\'ec\'d2\'f4\'b0\'e5\'c9\'cf\'b5\'c4\'d2\'bb\'b8\'f6\'b9\'ec\'b5\'c0
+\f4 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs72 \cf7 \'d7\'a2\'d2\'e2\'b5\'c4\'ce\'ca\'cc\'e2
+\f4 \
+
+\fs48 \cf0 1.
+\f1 \'c9\'e8\'d6\'c3\'ba\'f3\'cc\'a8\'b2\'a5\'b7\'c5\'c4\'a3\'ca\'bd\'a3\'a8\'c1\'bd\'b8\'f6\'b2\'bd\'d6\'e8\'c8\'b1\'d2\'bb\'b2\'bb\'bf\'c9\'a3\'a9\'a3\'ba\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic 屏幕快照 2016-01-05 下午8.06.20.png \width12200 \height640
+}�}\pard\pardeftab720\partightenfactor0
+
+\f1\fs48 \cf0 \expnd0\expndtw0\kerning0
+\
+ \'b5\'bdinfo.plist\'d6\'d0\'cc\'ed\'bc\'d3\
+         Required background modes
+\f4 \
+	
+\f1\fs36 \'b5\'da\'d2\'bb\'b2\'bd\'a3\'ba
+\f6\b Ap\cf19 p plays audio or streams audio/video using AirPlay\
+	
+\f5 \'b5\'da\'b6\'fe\'b2\'bd\'a3\'ba
+\b0 \cf0 \'c9\'e8\'d6\'c3
+\f6 AVAudioSession
+\f5 \'b5\'c4\'c0\'e0\'d0\'cd\'ce\'aa
+\f6 AVAudioSessionCategoryPlayback
+\f5 \'b2\'a2\'c7\'d2\'b5\'f7\'d3\'c3
+\f6 setActive::
+\f5 \'b7\'bd\'b7\'a8\'c6\'f4\'b6\'af\'bb\'e1\'bb\'b0
+\fs48 \
+\pard\pardeftab720\partightenfactor0
+
+\f8\fs24 \cf19 \cb23     AVAudioSession *audioSession=[AVAudioSession sharedInstance];\
+    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];\
+    [audioSession setActive:YES error:nil];
+\f4\fs48 \cf7 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 2.
+\f1 \'b4\'a6\'c0\'ed\'b0\'ce\'b3\'f6\'b6\'fa\'bb\'fa\'ba\'f3\'d4\'dd\'cd\'a3\'b9\'a6\'c4\'dc
+\f4 \
+\pard\pardeftab720\partightenfactor0
+
+\f8\fs24 \cf19 \cb23 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(routeChange:) name:AVAudioSessionRouteChangeNotification object:nil];
+\f4\fs72 \cf7 \cb1 \
+
+\f8\fs24 \cf19 \cb23 NSDictionary *dic=notification.userInfo;\
+    \cf24 int \cf19 changeReason= [dic[AVAudioSessionRouteChangeReasonKey] intValue];\cf25 \
+    \cf24 if \cf19 (changeReason==AVAudioSessionRouteChangeReasonOldDeviceUnavailable) \{\
+        AVAudioSessionRouteDescription *routeDescription=dic[AVAudioSessionRouteChangePreviousRouteKey];\
+        AVAudioSessionPortDescription *portDescription= [routeDescription.outputs firstObject];\
+        \cf25 //
+\f1 \'d4\'ad\'c9\'e8\'b1\'b8\'ce\'aa\'b6\'fa\'bb\'fa\'d4\'f2\'d4\'dd\'cd\'a3
+\f8 \
+        \cf24 if \cf19 ([portDescription.portType isEqualToString:@\cf26 "Headphones"\cf19 ]) \{\
+            \cf24 if \cf19 ([self.audioPlayer isPlaying])\
+	 \{\
+        		[self.audioPlayer pause];\
+        		self.timer.fireDate=[NSDate distantFuture];\
+        \}\
+    \}
+\f4\fs72 \cf7 \cb1 \
+\
+14.
+\f1 \'d2\'b9\'bc\'e4\'c4\'a3\'ca\'bd
+\f4 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf7 \'a3\'a81\'a3\'a9\'d2\'fd\'c8\'eb
+\f0\fs36 \cf9 \kerning1\expnd0\expndtw0 \CocoaLigature0 #import \cf10 "AppDelegate.h"\
+\pard\tx866\pardeftab866\pardirnatural
+\cf20 //
+\f1 \'d2\'b9\'bc\'e4\'c4\'a3\'ca\'bd
+\f0 \
+        if (sw.on) \{\
+            UIApplication *app = [UIApplication sharedApplication];\
+            AppDelegate *dele = app.delegate;\
+            darkView.backgroundColor = [UIColor blackColor];\
+            darkView.userInteractionEnabled = NO;\
+            darkView.alpha = 0.2;\
+            [dele.window addSubview:darkView];\
+        \}else\{\
+            [darkView removeFromSuperview];\
+        \}\cf1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs72 \cf27 \expnd0\expndtw0\kerning0
+\CocoaLigature1 15.\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\fs36 \cf27 \kerning1\expnd0\expndtw0 \CocoaLigature0 imageview = [FactoryUI createImageViewWithFrame:CGRectMake(0, -imageOriginHeight, SCREEN_W, 200) imageName:@"welcome1"];\
+    [tableview addSubview:imageview];\
+    //
+\f1 \'c9\'e8\'d6\'c3
+\f0 tableview
+\f1 \'c4\'da\'c8\'dd\'d4\'da
+\f0 imageview
+\f1 \'cf\'c2\'c3\'e6\'cf\'d4\'ca\'be
+\f0 \
+    tableview.contentInset = UIEdgeInsetsMake(imageOriginHeight, 0, 0, 0);\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs72 \cf27 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\fs36 \cf20 \kerning1\expnd0\expndtw0 \CocoaLigature0 #pragma mark - 
+\f1 \'ca\'b5\'cf\'d6\'c0\'ad\'b6\'af\'cd\'b7\'b2\'bf\'b7\'c5\'b4\'f3\'d0\'a7\'b9\'fb
+\f0 \
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView\
+\{\
+    //
+\f1 \'cd\'a8\'b9\'fd\'b8\'c4\'b1\'e4
+\f0 scrollview
+\f1 \'b5\'c4\'c6\'ab\'d2\'c6\'c1\'bf\'c0\'b4\'b8\'c4\'b1\'e4\'cd\'bc\'c6\'ac\'b5\'c4
+\f0 frame\
+    if (scrollView == tableview) \{\
+        //
+\f1 \'bb\'f1\'c8\'a1
+\f0 scrollview
+\f1 \'b2\'e2\'c6\'ab\'d2\'c6\'c1\'bf
+\f0 \
+        CGFloat y = scrollView.contentOffset.y;\
+        CGFloat x = (y + imageOriginHeight) / 2;\
+        if (y < -imageOriginHeight) \{\
+            CGRect rect = imageview.frame;\
+            //
+\f1 \'b8\'c4\'b1\'e4
+\f0 imageview
+\f1 \'b5\'c4
+\f0 frame\
+            rect.origin.y = y;\
+            rect.origin.x = x;\
+            rect.size.height = -y;\
+            rect.size.width = SCREEN_W + fabs(x)*2;\
+            imageview.frame = rect;\
+        \}\
+    \}\
+\}\
+\pard\tx866\pardeftab866\pardirnatural
+\cf1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf16 \
+\
+\
+}
