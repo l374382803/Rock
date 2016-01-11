@@ -10,7 +10,8 @@
 \red63\green105\blue30;\red54\green54\blue54;\red19\green0\blue150;\red242\green242\blue242;\red0\green0\blue255;
 \red15\green112\blue1;\red144\green1\blue18;\red155\green44\blue1;\red47\green47\blue47;\red196\green26\blue22;
 \red63\green110\blue116;\red38\green71\blue75;\red170\green13\blue145;\red46\green13\blue110;\red210\green0\blue53;
-\red246\green246\blue246;\red0\green116\blue0;}
+\red246\green246\blue246;\red0\green116\blue0;\red26\green27\blue29;\red234\green234\blue234;\red242\green242\blue242;
+\red38\green38\blue38;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
@@ -521,15 +522,29 @@ _titlelable.attributedText = str;\
 
 \f8\fs24 \cf19 \cb23 \expnd0\expndtw0\kerning0
 NSDictionary *dic=notification.userInfo;\
-    \cf24 int \cf19 changeReason= [dic[AVAudioSessionRouteChangeReasonKey] intValue];\cf25 \
-    \cf24 if \cf19 (changeReason==AVAudioSessionRouteChangeReasonOldDeviceUnavailable) \{\
+    \cf24 \expnd0\expndtw0\kerning0
+int \cf19 \expnd0\expndtw0\kerning0
+changeReason= [dic[AVAudioSessionRouteChangeReasonKey] intValue];\cf25 \expnd0\expndtw0\kerning0
+\
+    \cf24 \expnd0\expndtw0\kerning0
+if \cf19 \expnd0\expndtw0\kerning0
+(changeReason==AVAudioSessionRouteChangeReasonOldDeviceUnavailable) \{\
         AVAudioSessionRouteDescription *routeDescription=dic[AVAudioSessionRouteChangePreviousRouteKey];\
         AVAudioSessionPortDescription *portDescription= [routeDescription.outputs firstObject];\
-        \cf25 //
-\f1 \'d4\'ad\'c9\'e8\'b1\'b8\'ce\'aa\'b6\'fa\'bb\'fa\'d4\'f2\'d4\'dd\'cd\'a3
-\f8 \
-        \cf24 if \cf19 ([portDescription.portType isEqualToString:@\cf26 "Headphones"\cf19 ]) \{\
-            \cf24 if \cf19 ([self.audioPlayer isPlaying])\
+        \cf25 \expnd0\expndtw0\kerning0
+//
+\f1 \expnd0\expndtw0\kerning0
+\'d4\'ad\'c9\'e8\'b1\'b8\'ce\'aa\'b6\'fa\'bb\'fa\'d4\'f2\'d4\'dd\'cd\'a3
+\f8 \expnd0\expndtw0\kerning0
+\
+        \cf24 \expnd0\expndtw0\kerning0
+if \cf19 \expnd0\expndtw0\kerning0
+([portDescription.portType isEqualToString:@\cf26 \expnd0\expndtw0\kerning0
+"Headphones"\cf19 \expnd0\expndtw0\kerning0
+]) \{\
+            \cf24 \expnd0\expndtw0\kerning0
+if \cf19 \expnd0\expndtw0\kerning0
+([self.audioPlayer isPlaying])\
 	 \{\
         		[self.audioPlayer pause];\
         		self.timer.fireDate=[NSDate distantFuture];\
@@ -704,7 +719,7 @@ NSDictionary *dic=notification.userInfo;\
 \}\cf4 \
 \cf16 \
 17.\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab866\pardirnatural\partightenfactor0
 
 \f4\fs24 \cf0 \CocoaLigature1 							 \
 \
@@ -957,8 +972,102 @@ APPKey   appkey:
 
 \fs72 \cf28 \expnd0\expndtw0\kerning0
 	 \
-	
-\f0\fs36 \cf16 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
-\pard\tx866\pardeftab866\pardirnatural
-\cf16 \
+	18.\
+\'c8\'e7\'b9\'fb\'c4\'fa\'d3\'d0\'cd\'bc\'cf\'f1\'ce\'c4\'bc\'feNSData\'a3\'ac\'c8\'bb\'ba\'f3\'c4\'e3\'bf\'c9\'d2\'d4\'b2\'c2\'b2\'e2\'c4\'da\'c8\'dd\'c0\'e0\'d0\'cd\'bf\'b4\'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6\'d7\'d6\'bd\'da\
+\pard\pardeftab720
+
+\f8\fs26 \cf37 \cb38 \expnd0\expndtw0\kerning0
++ (NSString *)contentTypeForImageData:(NSData *)data \{\
+    uint8_t c;\
+    [data getBytes:&c length:1];\
+\
+    switch (c) \{\
+    case 0xFF:\
+        return @"image/jpeg";\
+    case 0x89:\
+        return @"image/png";\
+    case 0x47:\
+        return @"image/gif";\
+    case 0x49:\
+    case 0x4D:\
+        return @"image/tiff";\
+    \}\
+    return nil;\
+\}\
+\pard\tx566\pardeftab720\qj\partightenfactor0
+
+\f1\fs72 \cf28 \cb1 \expnd0\expndtw0\kerning0
+\
+\
+\
+\pard\pardeftab720
+
+\f8\fs26 \cf37 \cb38 \expnd0\expndtw0\kerning0
+- (NSString *)mimeTypeByGuessingFromData:(NSData *)data \{\
+\
+    char bytes[12] = \{0\};\
+    [data getBytes:&bytes length:12];\
+\
+    const char bmp[2] = \{'B', 'M'\};\
+    const char gif[3] = \{'G', 'I', 'F'\};\
+    const char swf[3] = \{'F', 'W', 'S'\};\
+    const char swc[3] = \{'C', 'W', 'S'\};\
+    const char jpg[3] = \{0xff, 0xd8, 0xff\};\
+    const char psd[4] = \{'8', 'B', 'P', 'S'\};\
+    const char iff[4] = \{'F', 'O', 'R', 'M'\};\
+    const char webp[4] = \{'R', 'I', 'F', 'F'\};\
+    const char ico[4] = \{0x00, 0x00, 0x01, 0x00\};\
+    const char tif_ii[4] = \{'I','I', 0x2A, 0x00\};\
+    const char tif_mm[4] = \{'M','M', 0x00, 0x2A\};\
+    const char png[8] = \{0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a\};\
+    const char jp2[12] = \{0x00, 0x00, 0x00, 0x0c, 0x6a, 0x50, 0x20, 0x20, 0x0d, 0x0a, 0x87, 0x0a\};\
+\
+\
+    if (!memcmp(bytes, bmp, 2)) \{\
+        return @"image/x-ms-bmp";\
+    \} else if (!memcmp(bytes, gif, 3)) \{\
+        return @"image/gif";\
+    \} else if (!memcmp(bytes, jpg, 3)) \{\
+        return @"image/jpeg";\
+    \} else if (!memcmp(bytes, psd, 4)) \{\
+        return @"image/psd";\
+    \} else if (!memcmp(bytes, iff, 4)) \{\
+        return @"image/iff";\
+    \} else if (!memcmp(bytes, webp, 4)) \{\
+        return @"image/webp";\
+    \} else if (!memcmp(bytes, ico, 4)) \{\
+        return @"image/vnd.microsoft.icon";\
+    \} else if (!memcmp(bytes, tif_ii, 4) || !memcmp(bytes, tif_mm, 4)) \{\
+        return @"image/tiff";\
+    \} else if (!memcmp(bytes, png, 8)) \{\
+        return @"image/png";\
+    \} else if (!memcmp(bytes, jp2, 12)) \{\
+        return @"image/jp2";\
+    \}\
+\
+    return @"application/octet-stream"; // default type\
+\
+\}\
+\pard\tx566\pardeftab720\qj\partightenfactor0
+
+\f0\fs36 \cf16 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\pardeftab720\sl480
+
+\f4\fs48 \cf16 \cb39 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec40 20.
+\fs36 \
+
+\fs48 \cf11 uiviewcontroller\'a0
+\f1 \'d6\'d0\'b5\'c4
+\f4 parentviewcontroller\'a0
+\f1 \'ca\'f4\'d0\'d4\'ca\'c7\'d3\'c3\'d3\'da\'c8\'a1\'b5\'c3\'b5\'b1\'c7\'b0\'bf\'d8\'d6\'c6\'c6\'f7\'b5\'c4\'b8\'b8\'c8\'dd\'c6\'f7\'a1\'a3\'bd\'a8\'c1\'a2\'d5\'e2\'b8\'f6\'b8\'b8\'d7\'d3\'b9\'d8\'cf\'b5\'b5\'c4\'ca\'c7\'cd\'a8\'b9\'fd
+\f4 [self\'a0addChildViewController:vc];
+\f1 \'d5\'e2\'d6\'d6\'b7\'bd\'ca\'bd\'c0\'b4\'bd\'a8\'c1\'a2\'b5\'c4\'a1\'a3\'c4\'c7\'c3\'b4\'d4\'da
+\f4 vc
+\f1 \'d5\'e2\'b8\'f6\'d7\'d3\'bf\'d8\'d6\'c6\'c6\'f7\'d6\'d0\'be\'cd\'bf\'c9\'d2\'d4\'cd\'a8\'b9\'fd
+\f4 \'a0sefl.parentViewController\'a0
+\f1 \'c0\'b4\'b7\'c3\'ce\'ca\'cb\'fc\'b5\'c4\'b8\'b8\'bf\'d8\'d6\'c6\'c6\'f7\'c1\'cb\'a1\'a3
+\f4 \'a0
+\f1 \'c8\'e7\'b9\'fb\'ca\'c7\'cd\'a8\'b9\'fd\'d7\'aa\'b3\'a1\'b6\'f8\'b9\'d8\'c1\'aa\'b5\'c4\'c1\'bd\'b8\'f6\'bf\'d8\'d6\'c6\'c6\'f7\'cb\'fc\'c3\'c7\'ca\'c7\'c6\'bd\'bc\'b6\'b5\'c4\'b9\'d8\'cf\'b5\'a3\'ac\'b2\'bb\'ca\'c7\'b0\'fc\'ba\'ac\'b9\'d8\'cf\'b5\'a1\'a3
+\f0\fs36 \cf16 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
 }
